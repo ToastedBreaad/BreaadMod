@@ -1,0 +1,12 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+	{
+		"item": "breaadmod:amongus_block"
+	}
+	],
+	"result": {
+		"item": "breaadmod:amongus",
+		"count": 9
+	}
+}
