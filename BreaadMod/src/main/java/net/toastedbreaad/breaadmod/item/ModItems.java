@@ -12,6 +12,7 @@ import net.minecraftforge.registries.RegistryObject;
 import net.toastedbreaad.breaadmod.BreaadModMain;
 import net.toastedbreaad.breaadmod.ModCreativeModeTab;
 import net.toastedbreaad.breaadmod.block.ModBlocks;
+import net.toastedbreaad.breaadmod.item.custom.EightBallItem;
 
 public class ModItems {
 	public static final DeferredRegister<Item> ITEMS = 
@@ -20,6 +21,11 @@ public class ModItems {
 	//basic amongus item
 	public static final RegistryObject<Item> AMONGUS = ITEMS.register("amongus",
 			() -> new Item(new Item.Properties()
+					.tab(ModCreativeModeTab.BREAAD_TAB)
+					));
+	public static final RegistryObject<Item> EIGHT_BALL = ITEMS.register("eight_ball",
+			() -> new EightBallItem(new Item.Properties()
+					.stacksTo(1)
 					.tab(ModCreativeModeTab.BREAAD_TAB)
 					));
 	//UNFISHIED. amongus fuel
