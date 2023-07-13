@@ -12,6 +12,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.toastedbreaad.breaadmod.BreaadModMain;
 import net.toastedbreaad.breaadmod.ModCreativeModeTab;
+import net.toastedbreaad.breaadmod.block.custom.JumpyBlock;
 import net.toastedbreaad.breaadmod.item.ModItems;
 
 public class ModBlocks {
@@ -28,6 +29,14 @@ public class ModBlocks {
 					new Item.Properties()
 					.tab(ModCreativeModeTab.BREAAD_TAB)
 					.fireResistant()
+					);
+	public static final RegistryObject<Block> JUMPY_BLOCK = registerBlock("jumpy_block",
+			() -> new JumpyBlock(BlockBehaviour.Properties.of(Material.STONE)
+					.strength(6f, 1200f)
+					.requiresCorrectToolForDrops()
+					),
+					new Item.Properties()
+					.tab(ModCreativeModeTab.BREAAD_TAB)
 					);
 	
 	private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> supplier, Item.Properties properties) {
