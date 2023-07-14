@@ -3,6 +3,7 @@ package net.toastedbreaad.breaadmod.item;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemNameBlockItem;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -23,18 +24,29 @@ public class ModItems {
 			() -> new Item(new Item.Properties()
 					.tab(ModCreativeModeTab.BREAAD_TAB)
 					));
+	
 	//eight ball item
 	public static final RegistryObject<Item> EIGHT_BALL = ITEMS.register("eight_ball",
 			() -> new EightBallItem(new Item.Properties()
 					.stacksTo(1)
 					.tab(ModCreativeModeTab.BREAAD_TAB)
 					));
+	
+	//amongus SEED
+	public static final RegistryObject<Item> SUS_SEEDS = ITEMS.register("sus_seeds",
+			() -> new ItemNameBlockItem(ModBlocks.AMONGUS_CROP_BLOCK.get(),
+					new Item.Properties()
+					.tab(ModCreativeModeTab.BREAAD_TAB)
+					));
+
+	
 	//suspicious food item
-	public static final RegistryObject<Item> SUS_FOOD = ITEMS.register("susfood",
+	public static final RegistryObject<Item> SUS_FOOD = ITEMS.register("sus_food",
 			() -> new Item(new Item.Properties()
 					.food(new FoodProperties.Builder().nutrition(2).saturationMod(0).build())
 					.tab(ModCreativeModeTab.BREAAD_TAB)
 					));
+	
 	public static void register(IEventBus eventBus) {
 		ITEMS.register(eventBus);
 	}

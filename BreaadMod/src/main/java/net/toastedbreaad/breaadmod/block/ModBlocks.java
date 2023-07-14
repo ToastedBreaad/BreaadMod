@@ -5,6 +5,7 @@ import net.minecraft.world.level.material.Material;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -12,6 +13,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.toastedbreaad.breaadmod.BreaadModMain;
 import net.toastedbreaad.breaadmod.ModCreativeModeTab;
+import net.toastedbreaad.breaadmod.block.custom.AmongusCropBlock;
 import net.toastedbreaad.breaadmod.block.custom.AmongusLamp;
 import net.toastedbreaad.breaadmod.block.custom.JumpyBlock;
 import net.toastedbreaad.breaadmod.item.ModItems;
@@ -31,6 +33,7 @@ public class ModBlocks {
 					.tab(ModCreativeModeTab.BREAAD_TAB)
 					.fireResistant()
 					);
+	
 	//jumpy block
 	public static final RegistryObject<Block> JUMPY_BLOCK = registerBlock("jumpy_block",
 			() -> new JumpyBlock(BlockBehaviour.Properties.of(Material.STONE)
@@ -40,8 +43,9 @@ public class ModBlocks {
 					new Item.Properties()
 					.tab(ModCreativeModeTab.BREAAD_TAB)
 					);
+	
 	//working amongus lamp
-	public static final RegistryObject<Block> AMONGUS_LAMP= registerBlock("amongus_lamp",
+	public static final RegistryObject<Block> AMONGUS_LAMP = registerBlock("amongus_lamp",
 			() -> new AmongusLamp(BlockBehaviour.Properties.of(Material.STONE)
 					.strength(6f, 1200f)
 					.requiresCorrectToolForDrops()
@@ -49,6 +53,12 @@ public class ModBlocks {
 					),
 					new Item.Properties()
 					.tab(ModCreativeModeTab.BREAAD_TAB)
+					);
+	//working amongus lamp
+	public static final RegistryObject<Block> AMONGUS_CROP_BLOCK = registerBlock("amongus_crop_block",
+			() -> new AmongusCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT)
+					),
+					new Item.Properties()
 					);
 	
 	private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> supplier, Item.Properties properties) {

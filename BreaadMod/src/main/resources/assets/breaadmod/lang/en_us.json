@@ -2,10 +2,13 @@
 	"itemGroup.breaadmodtab": "Breaad Mod",
 
 	"item.breaadmod.amongus": "amongus",	
-	"item.breaadmod.susfood": "suspicious food",
+	"item.breaadmod.sus_food": "suspicious food",
+	"item.breaadmod.sus_seeds": "suspicious seeds",
 	"item.breaadmod.eight_ball": "Eight Ballin",
 	
 	"block.breaadmod.amongus_block": "Amongus Block",
-	"block.breaadmod.jumpy_block": "Jumpy Block",
-	"block.breaadmod.amongus_lamp": "Amongus Lamp"
+	"block.breaadmod.amongus_lamp": "Amongus Lamp",
+	"block.breaadmod.amongus_crop_block": "Amongus Crop",
+	"block.breaadmod.jumpy_block": "Jumpy Block"
+
 }

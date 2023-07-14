@@ -1,6 +1,6 @@
 {
 	"parent": "item/generated",
 	"textures": {
-		"layer0": "breaadmod:item/susfood"
+		"layer0": "breaadmod:item/sus_food"
 	}
 }
