@@ -1,0 +1,6 @@
+{
+	"varients": {
+		"lit=true": {"model": "breaadmod:block/amongus_lamp_on"},
+		"lit=false": {"model": "breaadmod:block/amongus_lamp_off"}
+	}
+}

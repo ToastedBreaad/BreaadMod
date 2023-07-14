@@ -23,16 +23,12 @@ public class ModItems {
 			() -> new Item(new Item.Properties()
 					.tab(ModCreativeModeTab.BREAAD_TAB)
 					));
+	//eight ball item
 	public static final RegistryObject<Item> EIGHT_BALL = ITEMS.register("eight_ball",
 			() -> new EightBallItem(new Item.Properties()
 					.stacksTo(1)
 					.tab(ModCreativeModeTab.BREAAD_TAB)
 					));
-	//UNFISHIED. amongus fuel
-//	public static final RegistryObject<Item> SUS_FUEL = ITEMS.register("susfuel",
-//			() -> new Item(new Item.Properties()
-//					.tab(ModCreativeModeTab.BREAAD_TAB)
-//					));
 	//suspicious food item
 	public static final RegistryObject<Item> SUS_FOOD = ITEMS.register("susfood",
 			() -> new Item(new Item.Properties()

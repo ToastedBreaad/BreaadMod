@@ -12,6 +12,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.toastedbreaad.breaadmod.BreaadModMain;
 import net.toastedbreaad.breaadmod.ModCreativeModeTab;
+import net.toastedbreaad.breaadmod.block.custom.AmongusLamp;
 import net.toastedbreaad.breaadmod.block.custom.JumpyBlock;
 import net.toastedbreaad.breaadmod.item.ModItems;
 
@@ -19,7 +20,7 @@ public class ModBlocks {
 	public static final DeferredRegister<Block> BLOCKS = 
 			DeferredRegister.create(ForgeRegistries.BLOCKS, BreaadModMain.MOD_ID);
 	
-	
+	//amongus block (stone texture lmao)
 	public static final RegistryObject<Block> AMONGUS_BLOCK = registerBlock("amongus_block",
 			() -> new Block(BlockBehaviour.Properties.of(Material.STONE)
 					.strength(6f, 1200f)
@@ -30,10 +31,21 @@ public class ModBlocks {
 					.tab(ModCreativeModeTab.BREAAD_TAB)
 					.fireResistant()
 					);
+	//jumpy block
 	public static final RegistryObject<Block> JUMPY_BLOCK = registerBlock("jumpy_block",
 			() -> new JumpyBlock(BlockBehaviour.Properties.of(Material.STONE)
 					.strength(6f, 1200f)
 					.requiresCorrectToolForDrops()
+					),
+					new Item.Properties()
+					.tab(ModCreativeModeTab.BREAAD_TAB)
+					);
+	//working amongus lamp
+	public static final RegistryObject<Block> AMONGUS_LAMP= registerBlock("amongus_lamp",
+			() -> new AmongusLamp(BlockBehaviour.Properties.of(Material.STONE)
+					.strength(6f, 1200f)
+					.requiresCorrectToolForDrops()
+					.lightLevel((state) -> state.getValue(AmongusLamp.LIT) ? 15 : 0)
 					),
 					new Item.Properties()
 					.tab(ModCreativeModeTab.BREAAD_TAB)
