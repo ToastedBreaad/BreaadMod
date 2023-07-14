@@ -27,7 +27,6 @@ public class ModBlocks {
 			() -> new Block(BlockBehaviour.Properties.of(Material.STONE)
 					.strength(6f, 1200f)
 					.requiresCorrectToolForDrops()
-					.lightLevel((state) -> 15)
 					),
 					new Item.Properties()
 					.tab(ModCreativeModeTab.BREAAD_TAB)
@@ -37,8 +36,7 @@ public class ModBlocks {
 	//jumpy block
 	public static final RegistryObject<Block> JUMPY_BLOCK = registerBlock("jumpy_block",
 			() -> new JumpyBlock(BlockBehaviour.Properties.of(Material.STONE)
-					.strength(6f, 1200f)
-					.requiresCorrectToolForDrops()
+					.strength(6f)
 					),
 					new Item.Properties()
 					.tab(ModCreativeModeTab.BREAAD_TAB)
@@ -47,14 +45,14 @@ public class ModBlocks {
 	//working amongus lamp
 	public static final RegistryObject<Block> AMONGUS_LAMP = registerBlock("amongus_lamp",
 			() -> new AmongusLamp(BlockBehaviour.Properties.of(Material.STONE)
-					.strength(6f, 1200f)
-					.requiresCorrectToolForDrops()
+					.strength(6f)
 					.lightLevel((state) -> state.getValue(AmongusLamp.LIT) ? 15 : 0)
 					),
 					new Item.Properties()
 					.tab(ModCreativeModeTab.BREAAD_TAB)
 					);
-	//working amongus lamp
+	
+	//suspicious crop
 	public static final RegistryObject<Block> AMONGUS_CROP_BLOCK = registerBlock("amongus_crop_block",
 			() -> new AmongusCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT)
 					),

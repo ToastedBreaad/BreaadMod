@@ -1,11 +1,8 @@
 package net.toastedbreaad.breaadmod.item;
 
 import net.minecraft.world.food.FoodProperties;
-import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemNameBlockItem;
-import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.effect.MobEffect;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -38,7 +35,6 @@ public class ModItems {
 					new Item.Properties()
 					.tab(ModCreativeModeTab.BREAAD_TAB)
 					));
-
 	
 	//suspicious food item
 	public static final RegistryObject<Item> SUS_FOOD = ITEMS.register("sus_food",

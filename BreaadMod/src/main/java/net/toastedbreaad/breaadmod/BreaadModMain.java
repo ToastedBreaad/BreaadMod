@@ -56,7 +56,8 @@ public class BreaadModMain {
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
     @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
     public static class ClientModEvents {
-        @SubscribeEvent
+        @SuppressWarnings("removal")
+		@SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.AMONGUS_CROP_BLOCK.get(), RenderType.cutout());
         }
